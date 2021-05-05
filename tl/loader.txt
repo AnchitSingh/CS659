@@ -1,0 +1,6 @@
+classes = 8
+train  = ./tl/train.txt
+valid  = ./tl/test.txt
+names = ./tl/classes.txt
+backup = ./tl/backup
+

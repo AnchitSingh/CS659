@@ -1,14 +1,15 @@
 #! /usr/bin/python3
 # AUM SHREEGANESHAAYA NAMAH||
 
-from os import system, path, mkdir, remove
+from os import system, path, mkdir, remove, getcwd
 import sys
 import subprocess
 
 noneTl = { "Red" : 0, "Yellow" : 0, "Green" : 0, "off" : 0, "None" : 100 }
 vidTime = 6
-weights = 90000
-dk = "/home/ishanhmisra/Downloads/659_data/train_rgb/darknet"
+weights = 120000
+dk = "." # current folder
+
 
 def getLabel(imgPath=""):
 	try:
@@ -24,9 +25,11 @@ def getLabel(imgPath=""):
 
 		output = subprocess.check_output(f"ffmpeg -loop 1 -i {imgPath} -c:v libx264  -t {vidTime} -pix_fmt yuv420p tmp.mp4", shell=True).decode('utf-8')
 
-		output = subprocess.check_output(f"{dk}/darknet detector demo {dk}/tl/voc-bosch.data {dk}/tl/test.cfg {dk}/tl/weights/{weights}.weights ./tmp.mp4", shell=True).decode('utf-8')
+		output = subprocess.check_call(f"{dk}/darknet detector demo {dk}/tl/loader.txt {dk}/tl/test.cfg {dk}/tl/weights/{weights}.weights ./tmp.mp4", shell=True).decode('utf-8')
 
 		lines = output.split('\n')
+
+		print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
 
 		labels = { "Red" : [0, 0], "Green" : [0, 0], "Yellow" : [0, 0], "off" : [0, 0] }
 
@@ -74,7 +77,7 @@ if __name__ == '__main__':
 
 	if sys.argv[1] == "video":
 		inputFile = "" if (len(sys.argv) < 3) else sys.argv[2]
-		output = subprocess.check_output(f"{dk}/darknet detector demo {dk}/tl/voc-bosch.data {dk}/tl/test.cfg {dk}/tl/weights/{weights}.weights {inputFile}", shell=True).decode('utf-8')
+		output = subprocess.check_output(f"{dk}/darknet detector demo {dk}/tl/loader.txt {dk}/tl/test.cfg {dk}/tl/weights/{weights}.weights {inputFile}", shell=True).decode('utf-8')
 		print(output)
 		exit(0)
 

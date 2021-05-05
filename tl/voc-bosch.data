@@ -1,6 +1,0 @@
-classes = 8
-train  = /home/ishanhmisra/Downloads/659_data/train_rgb/darknet/tl/train.txt
-valid  = /home/ishanhmisra/Downloads/659_data/train_rgb/darknet/tl/test.txt
-names = /home/ishanhmisra/Downloads/659_data/train_rgb/darknet/tl/voc-bosch.names
-backup = /home/ishanhmisra/Downloads/659_data/train_rgb/darknet/tl/backup
-
