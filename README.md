@@ -2,6 +2,8 @@
 
 Course project done in CS659A (Autnomous Cyber-Physical Systems) at IIT Kanpur (January - April 2021).
 
+Note: Cloning this repository may take some time since the folder "tl/weights" is humongous.
+
 ### Installation
 Installation is highly specific to machines. The following were installed to successfully conduct the project:
   - python3 + pip3 + virtualenv + Flask
@@ -52,5 +54,5 @@ On the Raspberry Pi 4, edit the script "basic.py" to change IP address of host a
 $ python3 basic.py 
 ```
 
-Finally, we cannot assure that this project will run as desired on everyone's machine, but the instructor/mentor can please contact us to see real-time demonstration as done on April 20, 2021.
+Finally, we cannot assure that this project will run as desired on everyone's machine, but the instructor/mentor can please contact us to see real-time demonstration as done on April 20, 2021. We think it is best for the team to demonstrate again rather than the checker to install stuff on her/his machine and run this code.
 
