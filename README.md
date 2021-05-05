@@ -2,6 +2,10 @@
 
 Course project done in CS659A (Autnomous Cyber-Physical Systems) at IIT Kanpur (January - April 2021).
 
+Original PPT Link: https://1drv.ms/p/s!ApA9gmreFg4nmFqY_nGVBp3ofORY?e=FS1p31
+
+Note: Most of the code for training Convolutional Neural Networks is based on DarkNet (from https://github.com/pjreddie/darknet).
+
 Note: Cloning this repository may take some time since the folder "tl/weights" is humongous.
 
 ### Installation
