@@ -1,6 +1,6 @@
-classes = 8
-train  = ./tl/train.txt
-valid  = ./tl/test.txt
-names = ./tl/classes.txt
 backup = ./tl/backup
+classes = 8
+names = ./tl/classes.txt
+train  = ./tl/data_train.txt
+valid  = ./tl/data_test.txt
 
